@@ -4,7 +4,7 @@ import { Button, ButtonGroup } from '@mui/material';
 
 // Constants
 const numRows = 30;
-const numCols = 50;
+const numCols = 40;
 const wallProbability = 0.1;
 
 // Generate initial grid
