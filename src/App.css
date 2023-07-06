@@ -1,10 +1,10 @@
 .Grid {
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(20, 1fr);
-  width: 700px;
+  grid-template-columns: repeat(50, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  width: 80%;
   height: 700px;
-  border: 1px solid #ddd;
+  border: 0.5px solid #ddd;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
