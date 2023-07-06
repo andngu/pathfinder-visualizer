@@ -6,7 +6,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pathfinding Visualizer</h1>
       <Pathfinder />
     </div>
   );

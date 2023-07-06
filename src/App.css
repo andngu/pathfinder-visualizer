@@ -2,33 +2,35 @@
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
-  width: 500px;
-  height: 500px;
-  border: 1px solid #ccc;
+  width: 700px;
+  height: 700px;
+  border: 1px solid #ddd;
   margin: 0 auto;
   margin-top: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(0deg, #1f2026, #333);
 }
 
 .Node {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
 }
 
 .Node.Start {
-  background-color: #43a047;
+  background: linear-gradient(0deg, #1976d2, #333);
 }
 
 .Node.End {
-  background-color: #f44336;
+  background: linear-gradient(0deg, #fbc02d, #333);
 }
 
 .Node.Wall {
-  background-color: #607d8b;
+  background-color: #b71c1c;
 }
 
 .Node.Visited {
-  background-color: #e00b0b;
+  background: linear-gradient(135deg, #64dd17, #333);
 }
 
 .Node.Path {
-  background-color: #ffeb3b;
+  background: linear-gradient(0deg, #fbc02d, #e1fa00);
 }
