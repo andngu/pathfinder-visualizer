@@ -117,11 +117,12 @@ function Pathfinder() {
     const shortestPathNodesInOrder = [];
     let currentNode = endNode;
   
-    while (currentNode !== null) {
+    while (currentNode !== null && currentNode !== undefined) {
       shortestPathNodesInOrder.push({ row: currentNode.row, col: currentNode.col });
       currentNode = prev[currentNode.row][currentNode.col];
+      console.log(currentNode)
     }
-
+  
     shortestPathNodesInOrder.reverse();
     for (let i = 0; i < shortestPathNodesInOrder.length; i++) {
       const node = shortestPathNodesInOrder[i];
@@ -129,6 +130,7 @@ function Pathfinder() {
       setShortestPath((prevVisitedNodes) => [...prevVisitedNodes, node]);
     }
   }, [endNode]);
+  
   
   const runAlgorithm = useCallback(async (algorithm) => {
     if (isRunning) return;
@@ -179,7 +181,10 @@ function Pathfinder() {
         <Button onClick={() => runAlgorithm('BFS')} disabled={isRunning}>Breadth-First</Button>
         <Button onClick={() => runAlgorithm('DFS')} disabled={isRunning}>Depth-First</Button>
         <Button onClick={() => runAlgorithm('Dijkstra')} disabled={isRunning}>Dijkstra</Button>
-        <Button onClick={() => runAlgorithm('A*')} disabled={isRunning}>A*</Button>
+        {/* 
+        TODO: re-enable when A* is fixed
+        <Button onClick={() => runAlgorithm('A*')} disabled={true}>A*</Button> 
+        */}
       </ButtonGroup>}
       
       <div

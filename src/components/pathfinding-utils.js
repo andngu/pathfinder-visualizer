@@ -147,10 +147,13 @@ export const dijkstra = (startNode, endNode, grid) => {
   return { prev, visitedNodesInOrder };
 };
 
+// TODO: fix implementation for edge case, infinite loop in constructPath
 export const aStar = (startNode, endNode, grid) => {
+  const numRows = grid.length;
+  const numCols = grid[0].length;
   const openSet = [startNode];
   const closedSet = new Set();
-  const prev = new Array(grid.length).fill(null).map(() => new Array(grid[0].length).fill(null));
+  const prev = new Array(numRows).fill(null).map(() => new Array(numCols).fill(null));
 
   startNode.g = 0;
   startNode.h = heuristic(startNode, endNode);
@@ -192,21 +195,25 @@ export const aStar = (startNode, endNode, grid) => {
 
       const tentativeGScore = currentNode.g + 1; // Assuming that the distance between the nodes is 1
 
-      if (!openSet.includes(neighborNode)) {
+      if (openSet.includes(neighborNode)) {
+        if (tentativeGScore < neighborNode.g) {
+          neighborNode.g = tentativeGScore;
+          prev[neighborRow][neighborCol] = currentNode;
+          neighborNode.f = neighborNode.g + neighborNode.h;
+        }
+      } else {
         openSet.push(neighborNode);
-      } else if (tentativeGScore >= neighborNode.g) {
-        continue;
+        neighborNode.g = tentativeGScore;
+        prev[neighborRow][neighborCol] = currentNode;
+        neighborNode.h = heuristic(neighborNode, endNode);
+        neighborNode.f = neighborNode.g + neighborNode.h;
       }
-
-      prev[neighborRow][neighborCol] = currentNode;
-      neighborNode.g = tentativeGScore;
-      neighborNode.h = heuristic(neighborNode, endNode);
-      neighborNode.f = neighborNode.g + neighborNode.h;
     }
   }
   // If we've exited the loop without returning, then no path exists
   return { prev, visitedNodesInOrder };
 };
+
 
 // Get neighboring nodes
 export const getNeighbors = (row, col, grid) => {
