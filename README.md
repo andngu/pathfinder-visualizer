@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Pathfinder Visualizer
+The Pathfinder Visualizer is an interactive tool designed to visually demonstrate the inner workings of various pathfinding algorithms. The goal of this project is to create a platform where users can draw walls on a grid and watch as the chosen algorithm finds the shortest path between them.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is designed to help both beginners and advanced programmers alike understand how popular pathfinding algorithms work by providing a step-by-step visual guide through the algorithm's process. It supports four different algorithms including Depth-First Search (DFS), Breadth-First Search (BFS), Dijkstra's Algorithm, and A* Search Algorithm (in progress).
 
-## Available Scripts
+## Technologies Used:
+This project is developed using the following technologies:
 
-In the project directory, you can run:
+    React: The project is primarily built using React, a popular JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive user interface.
 
-### `npm start`
+    Material-UI: The user interface is designed using Material-UI, a popular React UI framework. Material-UI provides a variety of pre-built components following Material Design guidelines by Google, making the user interface modern, responsive, and user-friendly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React's component-based architecture is leveraged to create reusable, manageable, and testable code. Material-UI provides a consistent and attractive look-and-feel throughout the application, with built-in responsiveness to ensure the application works well on any screen size.
 
-### `npm test`
+## How to Use:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Clone or download the repository to your local machine.
+    Install all the necessary dependencies using npm install.
+    Run the application using npm start and visit http://localhost:8080 in your browser.
+    Click on any cell in the grid to create a wall, or click and drag to create multiple walls.
+    Select a pathfinding algorithm from the button group to start the algorithm.
 
-### `npm run build`
+## Algorithms:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project includes the following pathfinding algorithms:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Depth-First Search (DFS): DFS is an algorithm for traversing or searching tree or graph data structures. It uses a last-in, first-out approach, which often does not yield the shortest path.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Breadth-First Search (BFS): BFS is another algorithm for traversing or searching tree or graph data structures. It uses a first-in, first-out approach, which guarantees the shortest path in an unweighted graph.
 
-### `npm run eject`
+    Dijkstra's Algorithm: Dijkstra's Algorithm is a well-known algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It works for both directed and undirected graphs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    A Star Algorithm*: A* is a graph traversal and path search algorithm, which is widely used in many fields of computer science due to its completeness, optimality, and optimal efficiency. It uses a best-first search and finds the least-cost path from a given initial node to one goal node.
