@@ -15,11 +15,11 @@ React's component-based architecture is leveraged to create reusable, manageable
 
 ## How to Use:
 
-    Clone or download the repository to your local machine.
-    Install all the necessary dependencies using npm install.
-    Run the application using npm start and visit http://localhost:8080 in your browser.
-    Click on any cell in the grid to create a wall, or click and drag to create multiple walls.
-    Select a pathfinding algorithm from the button group to start the algorithm.
+1. Clone or download the repository to your local machine.
+2. Install all the necessary dependencies using `npm install`.
+3. Run the application using `npm start` and visit `http://localhost:8080` in your browser.
+4. Click on any cell in the grid to create a wall, or click and drag to create multiple walls.
+5. Select a pathfinding algorithm from the button group to start the algorithm.
 
 ## Algorithms:
 
