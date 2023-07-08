@@ -176,7 +176,7 @@ function Pathfinder() {
   
   return (
     <>
-      <h1 style={{color: 'white'}}>Pathfinding Visualizer</h1>
+      <h1 style={{color: 'white'}}>Pathfinder Visualizer</h1>
       {isRunning ? <h2 style={{color: 'white'}}>{selectedAlgorithm}</h2> : <ButtonGroup variant="contained" aria-label="outlined primary button group">
         <Button onClick={() => runAlgorithm('BFS')} disabled={isRunning}>Breadth-First</Button>
         <Button onClick={() => runAlgorithm('DFS')} disabled={isRunning}>Depth-First</Button>
